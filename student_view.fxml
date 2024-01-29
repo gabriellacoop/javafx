@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2.StudentController">
+   <children>
+      <VBox alignment="CENTER" layoutX="48.0" layoutY="52.0" prefHeight="250.0" prefWidth="225.0">
+         <AnchorPane fx:id="mainAnchorPane" />
+         <children>
+            <Label text="ID" />
+            <TextField id="idField" fx:id="idField">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Name" />
+            <TextField id="nameField" fx:id="nameField">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Major" />
+            <TextField id="majorField" fx:id="majorField">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox spacing="10"> <!-- Add HBox with spacing -->
+               <Button id="addButton" mnemonicParsing="false" onAction="#submit" text="Add" />
+               <Button id="updateButton" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
+               <Button text="Change Color" onAction="#changeColor" />
+            </HBox>
+         </children>
+      </VBox>
+      <TableView id="studentTable" fx:id="studentTable" layoutX="328.0" layoutY="52.0" prefHeight="250.0" prefWidth="225.0">
+         <columns>
+            <TableColumn id="idColumn" fx:id="idColumn" prefWidth="75.0" text="ID" />
+            <TableColumn id="nameColumn" fx:id="nameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn id="majorColumn" fx:id="majorColumn" prefWidth="75.0" text="Major" />
+         </columns>
+      </TableView>
+      <Button layoutX="410.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeStudent" text="Remove" />
+   </children>
+</AnchorPane>
